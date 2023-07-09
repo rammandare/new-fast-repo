@@ -11,8 +11,6 @@ pipeline {
             steps {
                 sh 'for i in `docker ps | awk {'print $1'} | sed '1d'`;do docker stop $i;done'
             }
-        }
-        
-        
+        }   
    }
 }
