@@ -10,18 +10,18 @@ pipeline {
      
     stage('Dangling Containers1') {
             steps {
-      sh 'sudo docker ps -q -f status=exited | xargs --no-run-if-empty docker stop'
+      sh 'sudo docker ps -q -f status=exited | xargs --no-run-if-empty sudo docker stop'
     }
         }
     stage('Dangling Containers2') {
         steps {
-      sh 'sudo docker ps -a -q -f status=exited | xargs --no-run-if-empty docker rm'
+      sh 'sudo docker ps -a -q -f status=exited | xargs --no-run-if-empty sudo docker rm'
     }
         }
     
     stage('Dangling Images') {
         steps {
-      sh 'sudo docker images -q -f dangling=true | xargs --no-run-if-empty docker rmi'
+      sh 'sudo docker images -q -f dangling=true | xargs --no-run-if-empty sudo docker rmi'
     }
         }
         stage('build') {
