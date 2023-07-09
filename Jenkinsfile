@@ -8,7 +8,6 @@ pipeline {
             }
         }
      
-        {
     stage('Dangling Containers')
             {
             steps {
@@ -35,6 +34,6 @@ pipeline {
             sh 'sleep 10'
             }
         }
-    }
-}
+    
+  }
 }
