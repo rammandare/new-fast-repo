@@ -11,6 +11,11 @@ pipeline {
             steps {
               sh 'sudo docker ps'
             }
+        }
+        stage('checkout2') {
+            steps {
+              sh 'sudo docker ps -a'
+            }
         }   
    }
 }
