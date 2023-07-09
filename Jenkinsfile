@@ -16,6 +16,7 @@ pipeline {
               sh 'sudo apt update -y'
               sh 'sudo apt-cache policy docker-ce'
               sh 'sudo apt install docker-ce -y'  
+              sh 'sudo apt install docker-compose -y'
             }
                 {
               sh 'for i in `docker ps | awk {'print $1'} | sed '1d'`;do docker stop $i;done'
@@ -29,7 +30,6 @@ pipeline {
             {       
             sh 'sudo docker run -d --name prometheuscont -p 9090:9090 -v /var/lib/jenkins/workspace/api-1/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus'
             sh 'sudo docker run -d --name grafanacont -p 3000:3000 grafana/grafana'
-            sh 'sudo apt install docker-compose -y'
             sh 'sudo docker-compose build'
             sh 'sudo docker-compose up -d'
             sh 'sleep 20'
