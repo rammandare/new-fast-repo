@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "first_name": "Ram",
+      "last_name": "Mandare",
+      "age": 32
+    },
+    {
+      "first_name": "rama",
+      "last_name": "mandare",
+      "age": 32
+    },
+    {
+      "first_name": "shyam",
+      "last_name": "mandare",
+      "age": 32
+    },
+    {
+      "first_name": "shyama",
+      "last_name": "mandare",
+      "age": 32
+    },
+    {
+      "first_name": "karan",
+      "last_name": "mandare",
+      "age": 32
+    },
+    {
+      "first_name": "bhagirath",
+      "last_name": "mandare",
+      "age": 0
+    },
+    {
+      "first_name": "vishal",
+      "last_name": "mandare",
+      "age": 0
+    },
+    {
+      "first_name": "sachin",
+      "last_name": "Mandare",
+      "age": 0
+    },
+    {
+      "first_name": "chandu",
+      "last_name": "Mandare",
+      "age": 0
+    },
+    {
+      "first_name": "sandeep",
+      "last_name": "Mandare",
+      "age": 20
+    },
+    {
+      "first_name": "Kashu",
+      "last_name": "Mandare",
+      "age": 2
+    },
+    {
+      "first_name": "mahi",
+      "last_name": "mandare",
+      "age": 22
+    },
+    {
+      "first_name": "arohi",
+      "last_name": "mandare",
+      "age": 3
+    },
+    {
+      "first_name": "ananya",
+      "last_name": "mandare",
+      "age": 1
+    }
+
+  ]
+}
