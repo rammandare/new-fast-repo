@@ -9,7 +9,7 @@ pipeline {
         }
         stage('checkout1') {
             steps {
-                 sh 'sudo docker ps | awk {'print $1'}'
+              sh 'sudo docker ps'
             }
         }   
    }
