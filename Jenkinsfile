@@ -32,7 +32,7 @@ pipeline {
             sh 'sudo docker run -d --name grafanacont -p 3000:3000 grafana/grafana'
             sh 'sudo docker-compose build'
             sh 'sudo docker-compose up -d'
-            sh 'sleep 20'
+            sh 'sleep 10'
             }
         }
     }
