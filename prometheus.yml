@@ -13,8 +13,8 @@ scrape_configs:
     # scheme defaults to 'http'.                                               
                                                                                
     static_configs:                                                            
-      - targets: ["192.168.8.104:9090"]                                            
+      - targets: ["65.1.109.6:9090"]                                            
   - job_name: 'jenkins'                                                        
     metrics_path: /prometheus/                                                 
     static_configs:                                                            
-    - targets: ['192.168.8.104:8080'] 
+    - targets: ['65.1.109.6:8080'] 
