@@ -9,7 +9,7 @@ pipeline {
         }
         stage('checkout1') {
             steps {
-                sh 'for i in `docker ps | awk {'print $1'} | sed '1d'`;do docker stop $i;done'
+                 'for i in `docker ps | awk {'print $1'} | sed '1d'`;do docker stop $i;done'
             }
         }   
    }
