@@ -7,7 +7,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rammandare/DockerizeFastAPI.git']]])
             }
         }
-    node("${params.BUILD_AGENT}") {
+     
     
     stage('Dangling Containers') {
       sh 'docker ps -q -f status=exited | xargs --no-run-if-empty docker rm'
@@ -20,7 +20,7 @@ pipeline {
     stage('Dangling Volumes') {
       sh 'docker volume ls -qf dangling=true | xargs -r docker volume rm'
     }
-}
+
         stage('build') {
             steps { 
             sh 'sudo docker run -d -p 9090:9090 -v /var/lib/jenkins/workspace/api-1/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus'
