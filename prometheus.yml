@@ -4,9 +4,9 @@ scrape_configs:
   - job_name: prometheus
     static_configs:
       - targets:
-          - 192.168.43.142:9090
+          - localhost:9090
   - job_name: jenkins
     metrics_path: /prometheus/
     static_configs:
       - targets:
-          - 192.168.43.142:8080
+          - localhost:8080
