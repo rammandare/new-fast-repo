@@ -8,14 +8,14 @@ pipeline {
             }
         }
      
-    stage('Dangling Containers') {
+    stage('Dangling Containers1') {
             steps {
-      sh 'docker ps -q -f status=exited | xargs --no-run-if-empty docker rm'
+      sh 'docker ps -q -f status=exited | xargs --no-run-if-empty docker stop'
     }
         }
-    stage('Dangling Containers') {
+    stage('Dangling Containers2') {
         steps {
-      sh 'docker ps -q -f status=exited | xargs --no-run-if-empty docker rm'
+      sh 'docker ps -a -q -f status=exited | xargs --no-run-if-empty docker rm'
     }
         }
     
